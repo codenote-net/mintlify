@@ -1,0 +1,105 @@
+---
+title: '開発'
+description: 'ドキュメントを更新するために変更をローカルでプレビュー'
+---
+
+<Info>
+  **前提条件**: 続行する前に、Node.js（バージョン19以上）をインストールしてください。
+</Info>
+
+お使いのオペレーティングシステムでMintlifyをインストールして実行する手順に従ってください：
+
+**ステップ1**: Mintlifyをインストール：
+
+<CodeGroup>
+
+  ```bash npm
+  npm i -g mintlify
+  ```
+
+```bash yarn
+yarn global add mintlify
+```
+
+</CodeGroup>
+
+**ステップ2**: ドキュメントディレクトリ（`mint.json`ファイルがある場所）に移動し、次のコマンドを実行：
+
+```bash
+mintlify dev
+```
+
+ドキュメントのローカルプレビューが`http://localhost:3000`で利用可能になります。
+
+### カスタムポート
+
+デフォルトでは、Mintlifyはポート3000を使用します。`--port`フラグを使用してMintlifyが実行するポートをカスタマイズできます。例えば、ポート3333でMintlifyを実行するには、このコマンドを使用します：
+
+```bash
+mintlify dev --port 3333
+```
+
+既に使用中のポートでMintlifyを実行しようとした場合、次に利用可能なポートを使用します：
+
+```md
+Port 3000 is already in use. Trying 3001 instead.
+```
+
+## Mintlifyバージョン
+
+各CLIリリースは特定のMintlifyバージョンに関連付けられていることに注意してください。ローカルウェブサイトがプロダクションバージョンと一致しない場合は、CLIを更新してください：
+
+<CodeGroup>
+
+```bash npm
+npm i -g mintlify@latest
+```
+
+```bash yarn
+yarn global upgrade mintlify
+```
+
+</CodeGroup>
+
+## リンクの検証
+
+CLIは、ドキュメント内で作成された参照リンクの検証を支援できます。壊れたリンクを特定するには、次のコマンドを使用します：
+
+```bash
+mintlify broken-links
+```
+
+## デプロイメント
+
+<Tip>
+  [プロプラン](https://mintlify.com/pricing)以上で無制限の編集者が利用可能です。
+</Tip>
+
+デプロイメントが成功すると、次のように表示されるはずです：
+
+<Frame>
+  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
+</Frame>
+
+## コードフォーマット
+
+IDEでMDXを認識してフォーマットする拡張機能の使用をお勧めします。VSCodeユーザーの場合は、構文ハイライト用の[MDX VSCode拡張機能](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)と、コードフォーマット用の[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)の使用を検討してください。
+
+## トラブルシューティング
+
+<AccordionGroup>
+  <Accordion title='エラー: Could not load the "sharp" module using the darwin-arm64 runtime'>
+
+    これは古いバージョンのnodeが原因の可能性があります。次を試してください：
+    1. 現在インストールされているmintlifyのバージョンを削除：`npm remove -g mintlify`
+    2. Node v19以上にアップグレード。
+    3. mintlifyを再インストール：`npm install -g mintlify`
+  </Accordion>
+
+  <Accordion title="問題: 不明なエラーが発生">
+  
+    解決方法：デバイスのルートに移動し、\~/.mintlifyフォルダを削除してください。その後、`mintlify dev`を再度実行してください。
+  </Accordion>
+</AccordionGroup>
+
+CLIバージョンで何が変更されたか気になりますか？[CLIチェンジログをチェックしてください。](https://www.npmjs.com/package/mintlify?activeTab=versions)

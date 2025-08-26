@@ -1,0 +1,66 @@
+---
+title: 'ナビゲーション'
+description: 'mint.jsonのnavigationフィールドは、ナビゲーションメニューに表示されるページを定義します'
+icon: 'map'
+---
+
+ナビゲーションメニューは、すべてのウェブサイトのリンクのリストです。
+
+新しいページを追加するたびに`mint.json`を更新する可能性があります。ページは自動的には表示されません。
+
+## ナビゲーション構文
+
+私たちのナビゲーション構文は再帰的で、ネストしたナビゲーショングループを作成できます。ページ名に`.mdx`を含める必要はありません。
+
+<CodeGroup>
+
+```json 通常のナビゲーション
+"navigation": [
+    {
+        "group": "はじめに",
+        "pages": ["quickstart"]
+    }
+]
+```
+
+```json ネストしたナビゲーション
+"navigation": [
+    {
+        "group": "はじめに",
+        "pages": [
+            "quickstart",
+            {
+                "group": "ネストしたリファレンスページ",
+                "pages": ["nested-reference-page"]
+            }
+        ]
+    }
+]
+```
+
+</CodeGroup>
+
+## フォルダ
+
+MDXファイルをフォルダに入れて、`mint.json`のパスを更新するだけです。
+
+例えば、`https://yoursite.com/your-folder/your-page`にページを配置するには、`your-page.mdx`というMDXファイルを含む`your-folder`というフォルダを作成します。
+
+<Warning>
+
+別のフォルダ内にネストしない限り、フォルダの名前に`api`を使用することはできません。MintlifyはNext.jsを使用し、内部サーバーコール用にトップレベルの`api`フォルダを予約しています。`api-reference`のようなフォルダ名は受け入れられます。
+
+</Warning>
+
+```json フォルダ付きナビゲーション
+"navigation": [
+    {
+        "group": "グループ名",
+        "pages": ["your-folder/your-page"]
+    }
+]
+```
+
+## 隠しページ
+
+`mint.json`に含まれていないMDXファイルは、サイドバーには表示されませんが、検索バーから、または直接リンクすることでアクセスできます。

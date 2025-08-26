@@ -1,0 +1,82 @@
+---
+title: 'クイックスタート'
+description: '5分以内に素晴らしいドキュメントの構築を開始'
+---
+
+## 開発環境のセットアップ
+
+ドキュメントをローカルで更新し、パブリックにデプロイする方法を学びましょう。
+
+### 編集とプレビュー
+
+<AccordionGroup>
+  <Accordion icon="github" title="ドキュメントをローカルにクローン">
+    オンボーディングプロセス中に、ドキュメントコンテンツを含むGitHubリポジトリを作成しました。このリポジトリは、
+    [ダッシュボード](https://dashboard.mintlify.com)で見つけることができます。リポジトリを
+    ローカルにクローンするには、ターミナルで以下の
+    [手順](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    に従ってください。
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="変更のプレビュー">
+    プレビューは、変更が意図した通りに表示されることを確認するのに役立ちます。これらの変更をローカルで
+    レンダリングするためのコマンドラインインターフェースを構築しました。1. 次のコマンドで
+    [Mintlify CLI](https://www.npmjs.com/package/mintlify)をインストールして、
+    ドキュメント変更をローカルでプレビューします： ``` npm i -g mintlify ```
+    2. ドキュメントのルート（`mint.json`がある場所）で次のコマンドを実行します： ``` mintlify dev ```
+  </Accordion>
+</AccordionGroup>
+
+### 変更のデプロイ
+
+<AccordionGroup>
+
+<Accordion icon="message-bot" title="GitHub アプリのインストール">
+  私たちのGitHubアプリは、変更を自動的にドキュメントサイトにデプロイするため、
+  デプロイメントを自分で管理する必要はありません。インストールリンクは
+  [ダッシュボード](https://dashboard.mintlify.com)で見つけることができます。ボットが
+  正常にインストールされると、リポジトリのコミットハッシュの横にチェックマークが表示されるはずです。
+</Accordion>
+<Accordion icon="rocket" title="変更をプッシュ">
+  ドキュメントサイトで変更を更新するために、
+  [変更をGitにコミットしてプッシュ](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
+  してください。プッシュしてもGitHubアプリが変更を正常にデプロイしていない場合は、
+  [ダッシュボード](https://dashboard.mintlify.com)でドキュメントを手動で更新することもできます。
+</Accordion>
+
+</AccordionGroup>
+
+## ドキュメントの更新
+
+MDX構文とReactコンポーネントを使用して、ファイルに直接コンテンツを追加します。私たちのコンポーネントのいずれかを使用することも、独自のコンポーネントを構築することもできます。
+
+<CardGroup>
+
+<Card title="ドキュメントのスタイリング" icon="paintbrush" href="/settings/global">
+  パーソナライズされたブランディングでドキュメントに華やかさを加えます。
+</Card>
+
+<Card
+  title="APIエンドポイントの追加"
+  icon="square-code"
+  href="/api-playground/configuration"
+>
+  OpenAPI仕様を実装し、APIユーザーインタラクションを有効にします。
+</Card>
+
+<Card
+  title="アナリティクスの統合"
+  icon="chart-mixed"
+  href="/analytics/supported-integrations"
+>
+  ドキュメントとのユーザーインタラクションから洞察を得ます。
+</Card>
+
+<Card
+  title="カスタムドメインでのホスティング"
+  icon="browser"
+  href="/settings/custom-domain/subdomain"
+>
+  自社ウェブサイトのサブドメインでドキュメントを維持します。
+</Card>
+
+</CardGroup>

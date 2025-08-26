@@ -1,0 +1,33 @@
+---
+title: 'はじめに'
+description: 'APIエンドポイントを紹介するセクションの例'
+---
+
+<Note>
+  APIリファレンスドキュメントの構築を予定していない場合は、
+  api-referenceフォルダを削除することでこのセクションを削除できます。
+</Note>
+
+## ようこそ
+
+APIドキュメントを構築する方法は2つあります：[OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup)と[MDXコンポーネント](https://mintlify.com/docs/api-playground/mdx/configuration)です。スターターキットでは、次のOpenAPI仕様を使用しています。
+
+<Card
+  title="植物ストアエンドポイント"
+  icon="leaf"
+  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+>
+  OpenAPI仕様ファイルを表示
+</Card>
+
+## 認証
+
+すべてのAPIエンドポイントはBearerトークンを使用して認証され、仕様ファイルから取得されます。
+
+```json
+"security": [
+  {
+    "bearerAuth": []
+  }
+]
+```
