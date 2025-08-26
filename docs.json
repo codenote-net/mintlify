@@ -9,46 +9,99 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Documentation",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Get Started",
+                "pages": [
+                  "en/introduction",
+                  "en/quickstart",
+                  "en/development"
+                ]
+              },
+              {
+                "group": "Essentials",
+                "pages": [
+                  "en/essentials/markdown",
+                  "en/essentials/code",
+                  "en/essentials/images",
+                  "en/essentials/settings",
+                  "en/essentials/navigation",
+                  "en/essentials/reusable-snippets"
+                ]
+              }
             ]
           },
           {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+            "tab": "API Reference",
+            "groups": [
+              {
+                "group": "API Documentation",
+                "pages": [
+                  "en/api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Endpoint Examples",
+                "pages": [
+                  "en/api-reference/endpoint/get",
+                  "en/api-reference/endpoint/create",
+                  "en/api-reference/endpoint/delete"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
-        "groups": [
+        "language": "ja",
+        "tabs": [
           {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
+            "tab": "ドキュメント",
+            "groups": [
+              {
+                "group": "はじめに",
+                "pages": [
+                  "ja/introduction",
+                  "ja/quickstart",
+                  "ja/development"
+                ]
+              },
+              {
+                "group": "基本機能",
+                "pages": [
+                  "ja/essentials/markdown",
+                  "ja/essentials/code",
+                  "ja/essentials/images",
+                  "ja/essentials/settings",
+                  "ja/essentials/navigation",
+                  "ja/essentials/reusable-snippets"
+                ]
+              }
             ]
           },
           {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
+            "tab": "APIリファレンス",
+            "groups": [
+              {
+                "group": "APIドキュメント",
+                "pages": [
+                  "ja/api-reference/introduction"
+                ]
+              },
+              {
+                "group": "エンドポイントの例",
+                "pages": [
+                  "ja/api-reference/endpoint/get",
+                  "ja/api-reference/endpoint/create",
+                  "ja/api-reference/endpoint/delete"
+                ]
+              }
             ]
           }
         ]
